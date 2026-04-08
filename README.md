@@ -12,7 +12,7 @@ tags:
 
 # DarkFactory-v1: Autonomous Dark Factory Digital Twin
 
-**OpenEnv Environment** — Meta × Hugging Face Hackathon Submission
+<strong>OpenEnv Environment</strong> — Meta × Hugging Face Hackathon Submission
 
 ---
 
