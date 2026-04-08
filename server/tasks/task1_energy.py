@@ -14,7 +14,7 @@ def grade_t1(trajectory: list) -> float:
         Score 0.0-1.0 based on energy cost savings vs naive baseline
     """
     if not trajectory:
-        return 0.0
+        return 0.001
 
     final_step = trajectory[-1]
     agent_cost = final_step.get("energy_cost_so_far", 0.0)
@@ -28,7 +28,7 @@ def grade_t1(trajectory: list) -> float:
         naive_cost += FIXED_LOAD / 60.0 * grid_price
 
     if naive_cost <= 0:
-        return 0.0
+        return 0.001
 
     savings_pct = (naive_cost - agent_cost) / naive_cost
-    return min(max(savings_pct, 0.0), 1.0)
+    return min(max(savings_pct, 0.001), 0.999)

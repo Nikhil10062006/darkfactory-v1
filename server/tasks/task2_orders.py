@@ -14,7 +14,7 @@ def grade_t2(trajectory: list) -> float:
         Score 0.0-1.0 based on fulfillment rate and cold chain safety
     """
     if not trajectory:
-        return 0.0
+        return 0.001
 
     final_step = trajectory[-1]
     orders_completed = final_step.get("orders_completed", 0)
@@ -39,4 +39,5 @@ def grade_t2(trajectory: list) -> float:
     cold_safe_ratio = max(0.0, 1.0 - temp_penalty)
 
     fulfillment_score = max(0.0, completion_ratio - breach_ratio * 0.5)
-    return min(1.0, 0.6 * fulfillment_score + 0.4 * cold_safe_ratio)
+    final_score = 0.6 * fulfillment_score + 0.4 * cold_safe_ratio
+    return max(0.001, min(0.999, final_score))
