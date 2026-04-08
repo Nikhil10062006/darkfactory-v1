@@ -8,8 +8,7 @@ app_port: 7860
 pinned: false
 tags:
   - openenv
----     
-
+---
 # DarkFactory-v1: Autonomous Dark Factory Digital Twin
 
 <strong>OpenEnv Environment</strong> — Meta × Hugging Face Hackathon Submission
