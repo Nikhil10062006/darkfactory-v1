@@ -1,0 +1,31 @@
+name: darkfactory-v1
+version: "1.0.0"
+entrypoint: server.main:app
+description: >
+  Autonomous dark factory / quick-commerce dark store simulation.
+  Four causally coupled subsystems: energy management, production line,
+  warehouse order fulfillment, and quality control.
+  Designed to benchmark agent multi-objective reasoning under compound stress events.
+  Features a real-world scenario of quick commerce fulfillment operations handling SLA constraints and cold-chains.
+tags:
+  - openenv
+  - manufacturing
+  - logistics
+  - energy
+  - real-world
+tasks:
+  - id: task1_energy
+    name: "Energy Management"
+    difficulty: easy
+    max_steps: 480
+  - id: task2_orders
+    name: "Order Fulfillment"
+    difficulty: medium
+    max_steps: 120
+  - id: task3_crisis
+    name: "Crisis Response"
+    difficulty: hard
+    max_steps: 480
+action_space: discrete_composite
+observation_space: structured_dict
+reward_range: [0.0, 1.0]
