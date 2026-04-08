@@ -24,5 +24,8 @@ dependencies = [
 [project.urls]
 Homepage = "https://github.com/darkfactory-v1"
 
+[project.scripts]
+server = "server.app:start"
+
 [tool.setuptools.packages.find]
 include = ["server*"]
