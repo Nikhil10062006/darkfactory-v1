@@ -1,3 +1,15 @@
+---
+title: DarkFactory-v1
+emoji: 🏭
+colorFrom: blue
+colorTo: black
+sdk: docker
+app_port: 7860
+pinned: false
+tags:
+  - openenv
+---     
+
 # DarkFactory-v1: Autonomous Dark Factory Digital Twin
 
 **OpenEnv Environment** — Meta × Hugging Face Hackathon Submission
